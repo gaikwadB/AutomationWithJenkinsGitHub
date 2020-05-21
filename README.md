@@ -37,12 +37,16 @@ This task is given by Vimal Daga Sir,in this project i implement the automation 
 
 ## Step By Step Procedure Of Creating This Project:
 
- 1. Creating Dockerfile and Building Personal Image using it :
-       *Just see the below mentioned picture. Here I create one Dockerfile and run the build command. Remember one thing you have to run          this command particularly on that folder where you Dockerfile exits.
+## 1. Creating Dockerfile and Building Personal Image using it :
+
+   *Just see the below mentioned picture. Here I create one Dockerfile and run the build command. Remember one thing you have to run          this command particularly on that folder where you Dockerfile exits.
        
-       * Here i have created image using following commands
-          docker build -t myjen:v1 .
-       * Here , i have define the code of Dockerfile:
+   * Here i have created image using following commands
+         
+         docker build -t myjen:v1 .
+         
+   * Here , i have define the code of Dockerfile:
+      
           FROM centos:8
 
           RUN yum install wget -y
@@ -55,5 +59,12 @@ This task is given by Vimal Daga Sir,in this project i implement the automation 
 
           EXPOSE 8080
           
-        
-    
+dataset:![dataset](/Screenshots/dockerfile.png)
+
+## 2. Running the container and getting the files:
+   
+   In the below picture you can see that, docker image is creating with their required dependencies,packages etc.
+      
+  :![dataset](/Screenshots/building_image.png)
+      
+
