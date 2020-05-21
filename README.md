@@ -59,16 +59,18 @@ This task is given by Vimal Daga Sir,in this project i implement the automation 
 
           EXPOSE 8080
           
-dataset:![dataset](/Screenshots/dockerfile.png)
+  :![dataset](/Screenshots/dockerfile.png)
 
 ## 2. Running the container and getting the files:
    
    In the below picture you can see that, docker image is creating with their required dependencies,packages etc.
       
-   :![dataset](/Screenshots/building_image.png)
+  :![dataset](/Screenshots/building_image.png)
   
   
   After building the container, we can see in the below picture that we have created the one docker image file that name is myjetty:v1
+  
+  
   :![dataset](/Screenshots/image_done.png) 
   
   Once we creted a docker file you can run the container based on that myjeety:v1 image file.
@@ -77,6 +79,78 @@ dataset:![dataset](/Screenshots/dockerfile.png)
       docker run -it -P --previlleged -v /:/host --name myjen myjetty:v1
   
   :![dataset](/Screenshots/docker_running_process.png)
+  
+  Once these process done, then you have to run the jenkins by putting the ip address of base redhat os with port allocated to the myjen  container in webbrowser.
+  
+ To unclock the jenkins you have to paste the password, to get the password put the following command in terminal
+ 
+      docker exec myjen cat /root/.jenkins/secrets/InitialAdminPassword
+      
+## 3. Jenkins Job1 :
+
+   This job pull the Github repo automatically when some developers push repo to Github.
+   Follow the below mentioned picture and build the 1st job in Jenkins.
+   
+   Go to the 'configure' of your job and fill these data. First give the URL of your project repository. Next in SCM select git and         fill the repo URL and select the branch to dev.
+    
+   And in build trigger just select Build Trigger Remotely and give a desired token name. This will help us to trigger jenkins as soon      as we push our code to github remotely.
+   :![dataset](/Screenshots/job1_01.png)
+   :![dataset](/Screenshots/job1_02.png)
+   
+   * Next this is the code which gonna help to copy our files from Jenkins Workspace to our desired folder.
+   
+   :![dataset](/Screenshots/job1_03.png)
+   
+   
+## 4.  Jenkins Job2 :
+
+  Follow the below mentioned picture and build the 2nd job in Jenkins.
+  This job do this Jenkins should automatically start the respective language interpreter install image container to deploy code ( eg.     If code is of PHP, then Jenkins should start the container that has PHP already installed ).
+  
+  :![dataset](/Screenshots/job2_01.png)
+  :![dataset](/Screenshots/job2_02.png)
+  
+## 5. Jenkins Email Configuration :
+
+  Follow the below mentioned picture and configure your email address with Jenkins to get notifications :
+  Goto The Manage Jenkis > Configure System and scroll down and fill up the email notification portion
+  
+  :![dataset](/Screenshots/email_configuration.png)
+  
+## 6. Jenkins Job 3:
+  
+  Follow the below mentioned picture and build the 3rd job in Jenkins.
+  Test your app if it is working or not. If app is not working , then send email to developer with error messages.
+  Here again use the previous trigger. This code will check if our php code is working fine or not.
+
+  :![dataset](/Screenshots/job3_01.png)
+  :![dataset](/Screenshots/job3_02.png)
+  :![dataset](/Screenshots/job3_04.png)
+  
+## 7. Jenkins Job4 :
+
+  Follow the below mentioned picture and build the 3rd job in Jenkins.
+  This job will keep on checking each minutes if my docker container is running or not.These 5 start means each minute this job will        automatically triggers itself
+  
+   :![dataset](/Screenshots/job4_01.png)
+  :![dataset](/Screenshots/job4_02.png)
+ 
+## 8.Creating Build Pipeline View :
+  Just simply create one new My view in Jenkins and select Build Pipeline. Then at the end only mention job1 and you are done.
+
+## we looked on the result
+
+:![dataset](/Screenshots/build_pipeline_successful.png)
+:![dataset](/Screenshots/job_run_suceesful.png)
+:![dataset](/Screenshots/job_running.png)
+:![dataset](/Screenshots/webpage_host.png)
+
+once we changed the content of webpage and their will be some error you will get following result
+
+:![dataset](/Screenshots/build_pipeline_failed.png)
+:![dataset](/Screenshots/webpage_problem.png)
+:![dataset](/Screenshots/email.png)
+
   
   
       
