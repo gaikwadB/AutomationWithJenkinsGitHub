@@ -69,7 +69,7 @@ dataset:![dataset](/Screenshots/dockerfile.png)
   
   
   After building the container, we can see in the below picture that we have created the one docker image file that name is myjetty:v1
-  :[dataset](/Screenshots/image_done.png) 
+  :![dataset](/Screenshots/image_done.png) 
   
   Once we creted a docker file you can run the container based on that myjeety:v1 image file.
   To run the container here is the command:
