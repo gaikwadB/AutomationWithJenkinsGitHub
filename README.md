@@ -125,14 +125,14 @@ This task is given by Vimal Daga Sir,in this project i implement the automation 
 
   :![dataset](/Screenshots/job3_01.png)
   :![dataset](/Screenshots/job3_02.png)
-  :![dataset](/Screenshots/job3_04.png)
+  :![dataset](/Screenshots/job3_03.png)
   
 ## 7. Jenkins Job4 :
 
   Follow the below mentioned picture and build the 3rd job in Jenkins.
   This job will keep on checking each minutes if my docker container is running or not.These 5 start means each minute this job will        automatically triggers itself
   
-   :![dataset](/Screenshots/job4_01.png)
+  :![dataset](/Screenshots/job4_01.png)
   :![dataset](/Screenshots/job4_02.png)
  
 ## 8.Creating Build Pipeline View :
