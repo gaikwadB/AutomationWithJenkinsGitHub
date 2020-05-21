@@ -140,8 +140,8 @@ This task is given by Vimal Daga Sir,in this project i implement the automation 
 
 ## we looked on the result
 
-:![dataset](/Screenshots/build_pipeline_successful.png)
-:![dataset](/Screenshots/job_run_suceesful.png)
+:![dataset](/Screenshots/build_pipeline_successfull.png)
+:![dataset](/Screenshots/job_run_ suceesful.png)
 :![dataset](/Screenshots/job_running.png)
 :![dataset](/Screenshots/webpage_host.png)
 
