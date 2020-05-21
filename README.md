@@ -65,6 +65,19 @@ dataset:![dataset](/Screenshots/dockerfile.png)
    
    In the below picture you can see that, docker image is creating with their required dependencies,packages etc.
       
-  :![dataset](/Screenshots/building_image.png)
+   :![dataset](/Screenshots/building_image.png)
+  
+  
+  After building the container, we can see in the below picture that we have created the one docker image file that name is myjetty:v1
+  :[dataset](/Screenshots/image_done.png) 
+  
+  Once we creted a docker file you can run the container based on that myjeety:v1 image file.
+  To run the container here is the command:
+      
+      docker run -it -P --previlleged -v /:/host --name myjen myjetty:v1
+  
+  :![dataset](/Screenshots/docker_running_process.png)
+  
+  
       
 
